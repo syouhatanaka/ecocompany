@@ -10,18 +10,18 @@ interface FadeInProps {
 
 export default function FadeIn({ children, className = "", delay = 0 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [hasHydrated, setHasHydrated] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  // Mark as hydrated on mount
   useEffect(() => {
+    setHasHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasHydrated) return;
     const el = ref.current;
     if (!el) return;
-
-    // Check if already in viewport on mount
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      setTimeout(() => setIsVisible(true), delay * 100);
-      return;
-    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,23 +30,26 @@ export default function FadeIn({ children, className = "", delay = 0 }: FadeInPr
           observer.unobserve(el);
         }
       },
-      { threshold: 0.05, rootMargin: "0px 0px 50px 0px" }
+      { threshold: 0, rootMargin: "0px 0px 100px 0px" }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay]);
+  }, [hasHydrated, delay]);
+
+  // Before hydration: show content normally (SSR/SSG)
+  // After hydration but not yet visible: hide for animation
+  // After visible: show with animation
+  const style = !hasHydrated
+    ? {} // SSR: no inline style, content visible by default
+    : {
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 0.6s ease ${delay * 0.1}s, transform 0.6s ease ${delay * 0.1}s`,
+      };
 
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : "translateY(24px)",
-        transition: "opacity 0.6s ease, transform 0.6s ease",
-      }}
-    >
+    <div ref={ref} className={className} style={style}>
       {children}
     </div>
   );
