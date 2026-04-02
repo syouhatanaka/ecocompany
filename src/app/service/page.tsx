@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionFolio from "@/components/SectionFolio";
 import FadeIn from "@/components/FadeIn";
 
@@ -64,9 +65,26 @@ export default function ServicePage() {
       {/* ── Cost Reduction ── */}
       <section className="section-pad">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <SectionFolio number="01" title="経費削減事業" subtitle="Cost Reduction" />
-          </FadeIn>
+          <div className="grid grid-cols-12 gap-8 mb-16">
+            <div className="col-span-12 lg:col-span-4">
+              <FadeIn>
+                <SectionFolio number="01" title="経費削減事業" subtitle="Cost Reduction" />
+              </FadeIn>
+            </div>
+            <div className="col-span-12 lg:col-span-7 lg:col-start-5">
+              <FadeIn delay={1}>
+                <div className="relative overflow-hidden" style={{ height: "300px" }}>
+                  <Image
+                    src="/images/office-meeting.jpg"
+                    alt="ビジネスミーティング"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
 
           <div className="space-y-12 mt-8">
             {costReduction.map((item, i) => (
@@ -103,9 +121,26 @@ export default function ServicePage() {
         style={{ backgroundColor: "var(--color-base-warm)" }}
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <SectionFolio number="02" title="物流事業" subtitle="Logistics" />
-          </FadeIn>
+          <div className="grid grid-cols-12 gap-8 mb-16">
+            <div className="col-span-12 lg:col-span-5">
+              <FadeIn>
+                <div className="relative overflow-hidden" style={{ height: "300px" }}>
+                  <Image
+                    src="/images/logistics.jpg"
+                    alt="物流・配送イメージ"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                </div>
+              </FadeIn>
+            </div>
+            <div className="col-span-12 lg:col-span-5 lg:col-start-7 flex items-center">
+              <FadeIn delay={1}>
+                <SectionFolio number="02" title="物流事業" subtitle="Logistics" />
+              </FadeIn>
+            </div>
+          </div>
 
           <div className="space-y-12 mt-8">
             {logistics.map((item, i) => (

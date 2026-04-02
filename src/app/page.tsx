@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SectionFolio from "@/components/SectionFolio";
 import FadeIn from "@/components/FadeIn";
 
@@ -96,14 +97,37 @@ export default function Home() {
               </FadeIn>
             </div>
 
-            {/* Folio decoration */}
-            <div className="hidden lg:flex col-span-4 items-end justify-end pb-8">
-              <span
-                className="font-[family-name:var(--font-cormorant)] text-[12rem] font-extralight leading-none select-none"
-                style={{ color: "rgba(26,26,26,0.04)" }}
-              >
-                Ec
-              </span>
+            {/* Hero Image - overlapping with text */}
+            <div className="hidden lg:block col-span-4 relative">
+              <FadeIn delay={2}>
+                <div className="relative -ml-16 mt-8">
+                  <div
+                    className="relative overflow-hidden"
+                    style={{ aspectRatio: "3/4" }}
+                  >
+                    <Image
+                      src="/images/hero-business.jpg"
+                      alt="ビジネスイメージ"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 0vw, 33vw"
+                      priority
+                    />
+                    {/* Paper texture overlay on image */}
+                    <div
+                      className="absolute inset-0"
+                      style={{ backgroundColor: "rgba(245,244,240,0.08)" }}
+                    />
+                  </div>
+                  {/* Folio decoration overlapping image */}
+                  <span
+                    className="absolute -bottom-8 -right-8 font-[family-name:var(--font-cormorant)] text-[8rem] font-extralight leading-none select-none"
+                    style={{ color: "rgba(26,26,26,0.06)" }}
+                  >
+                    Ec
+                  </span>
+                </div>
+              </FadeIn>
             </div>
           </div>
         </div>
@@ -124,6 +148,18 @@ export default function Home() {
             <div className="col-span-12 lg:col-span-3">
               <FadeIn>
                 <SectionFolio number="01" title="理念" subtitle="Philosophy" />
+              </FadeIn>
+              {/* Side image */}
+              <FadeIn delay={2}>
+                <div className="hidden lg:block mt-8 relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  <Image
+                    src="/images/sendai-city.jpg"
+                    alt="仙台の街並み"
+                    fill
+                    className="object-cover"
+                    sizes="25vw"
+                  />
+                </div>
               </FadeIn>
             </div>
             <div className="col-span-12 lg:col-span-7 lg:col-start-5">
@@ -158,6 +194,25 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <FadeIn>
             <SectionFolio number="02" title="事業紹介" subtitle="Services" />
+          </FadeIn>
+
+          {/* Wide image banner */}
+          <FadeIn>
+            <div className="grid grid-cols-12 gap-8 mb-16">
+              <div className="col-span-12 lg:col-span-9 lg:col-start-3 relative overflow-hidden" style={{ height: "280px" }}>
+                <Image
+                  src="/images/business-handshake.jpg"
+                  alt="ビジネスパートナーシップ"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 75vw"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{ backgroundColor: "rgba(245,244,240,0.1)" }}
+                />
+              </div>
+            </div>
           </FadeIn>
 
           <div className="grid grid-cols-12 gap-8 mt-8">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionFolio from "@/components/SectionFolio";
 import FadeIn from "@/components/FadeIn";
 
@@ -28,6 +29,24 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Full-width image ── */}
+      <FadeIn>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-12">
+            <div className="col-span-12 lg:col-span-10 lg:col-start-2 relative overflow-hidden" style={{ height: "360px" }}>
+              <Image
+                src="/images/sendai-city.jpg"
+                alt="仙台の街並み"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 83vw"
+              />
+              <div className="absolute inset-0" style={{ backgroundColor: "rgba(245,244,240,0.05)" }} />
+            </div>
+          </div>
+        </div>
+      </FadeIn>
 
       <hr className="ruler" />
 
