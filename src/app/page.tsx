@@ -5,22 +5,28 @@ import FadeIn from "@/components/FadeIn";
 
 const services = [
   {
+    number: "01",
     title: "経費削減事業",
     subtitle: "Cost Reduction",
     description:
       "法人携帯・電気料金・WEB広告など、企業の固定費を徹底的に見直し、最適なプランをご提案します。",
+    image: "/images/cost-consulting.jpg",
   },
   {
+    number: "02",
     title: "物流事業",
     subtitle: "Logistics",
     description:
       "格安配送サービスから運送業者と荷主のマッチングまで、物流における課題を解決します。",
+    image: "/images/logistics.jpg",
   },
   {
+    number: "03",
     title: "サービス事業",
     subtitle: "Business Service",
     description:
       "請求代行サービスなど、企業の業務効率化を支援するソリューションを提供します。",
+    image: "/images/office-desk.jpg",
   },
 ];
 
@@ -34,26 +40,57 @@ export default function Home() {
   return (
     <>
       {/* ── Hero Section ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Vertical accent text */}
-        <div className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2">
-          <p className="vertical-text">
-            人と人、企業と企業をつなぐ
-          </p>
+      <section className="relative min-h-screen flex items-end overflow-hidden">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-business.jpg"
+            alt="モダンオフィス"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          {/* Gradient overlay for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(245,244,240,0.92) 0%, rgba(245,244,240,0.6) 40%, rgba(245,244,240,0.85) 100%)",
+            }}
+          />
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 w-full pt-32 pb-20">
+        {/* Vertical accent text */}
+        <div className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 z-10">
+          <p className="vertical-text">人と人、企業と企業をつなぐ</p>
+        </div>
+
+        {/* Large decorative type */}
+        <div className="absolute top-28 right-8 lg:right-24 z-[1] select-none pointer-events-none">
+          <span
+            className="font-[family-name:var(--font-cormorant)] text-[12rem] lg:text-[20rem] font-extralight leading-none"
+            style={{ color: "rgba(26,26,26,0.03)" }}
+          >
+            Ec
+          </span>
+        </div>
+
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 w-full pb-24 pt-48">
           <div className="grid grid-cols-12 gap-4">
-            {/* Main heading area - asymmetric */}
-            <div className="col-span-12 lg:col-span-8">
+            {/* Main heading area */}
+            <div className="col-span-12 lg:col-span-7">
               <FadeIn>
-                <p className="label mb-6" style={{ color: "var(--color-accent)" }}>
+                <p
+                  className="label mb-6"
+                  style={{ color: "var(--color-accent)" }}
+                >
                   Ecology Communication Inc.
                 </p>
               </FadeIn>
 
               <FadeIn delay={1}>
-                <h1 className="font-[family-name:var(--font-noto-serif-jp)] mb-8">
+                <h1 className="font-[family-name:var(--font-noto-serif-jp)] mb-10">
                   人と人、
                   <br />
                   企業と企業を
@@ -63,9 +100,9 @@ export default function Home() {
               </FadeIn>
 
               <FadeIn delay={2}>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <p
-                    className="text-sm leading-relaxed"
+                    className="text-sm leading-[2]"
                     style={{ color: "var(--color-text-mid)" }}
                   >
                     双方のビジネスが円滑に展開できる提案に注力し、
@@ -75,10 +112,10 @@ export default function Home() {
               </FadeIn>
 
               <FadeIn delay={3}>
-                <div className="mt-12 flex gap-6 items-center">
+                <div className="mt-14 flex gap-8 items-center">
                   <Link
                     href="/company"
-                    className="inline-block border px-8 py-3 text-sm tracking-[0.08em] transition-all duration-300"
+                    className="inline-block border px-10 py-4 text-sm tracking-[0.08em] transition-all duration-300 hover:bg-[var(--color-text)] hover:text-[var(--color-base)]"
                     style={{
                       borderColor: "var(--color-text)",
                       color: "var(--color-text)",
@@ -97,35 +134,22 @@ export default function Home() {
               </FadeIn>
             </div>
 
-            {/* Hero Image - overlapping with text */}
-            <div className="hidden lg:block col-span-4 relative">
-              <FadeIn delay={2}>
-                <div className="relative -ml-16 mt-8">
-                  <div
-                    className="relative overflow-hidden"
-                    style={{ aspectRatio: "3/4" }}
-                  >
-                    <Image
-                      src="/images/hero-business.jpg"
-                      alt="ビジネスイメージ"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 0vw, 33vw"
-                      priority
-                    />
-                    {/* Paper texture overlay on image */}
-                    <div
-                      className="absolute inset-0"
-                      style={{ backgroundColor: "rgba(245,244,240,0.08)" }}
-                    />
-                  </div>
-                  {/* Folio decoration overlapping image */}
-                  <span
-                    className="absolute -bottom-8 -right-8 font-[family-name:var(--font-cormorant)] text-[8rem] font-extralight leading-none select-none"
-                    style={{ color: "rgba(26,26,26,0.06)" }}
-                  >
-                    Ec
-                  </span>
+            {/* Stats / Key figures */}
+            <div className="hidden lg:flex col-span-5 flex-col justify-end items-end gap-12">
+              <FadeIn delay={3}>
+                <div className="text-right">
+                  <p className="label mb-2">Since</p>
+                  <p className="font-[family-name:var(--font-cormorant)] text-5xl font-light">
+                    2019
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn delay={4}>
+                <div className="text-right">
+                  <p className="label mb-2">Location</p>
+                  <p className="font-[family-name:var(--font-noto-serif-jp)] text-lg font-light">
+                    仙台市青葉区
+                  </p>
                 </div>
               </FadeIn>
             </div>
@@ -133,54 +157,83 @@ export default function Home() {
         </div>
 
         {/* Bottom ruler */}
-        <div className="absolute bottom-0 left-0 w-full">
+        <div className="absolute bottom-0 left-0 w-full z-10">
           <hr className="ruler" />
         </div>
       </section>
 
       {/* ── Philosophy Section ── */}
       <section
-        className="section-pad relative"
+        className="section-pad relative overflow-hidden"
         style={{ backgroundColor: "var(--color-base-warm)" }}
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-3">
+          <div className="grid grid-cols-12 gap-8 lg:gap-12">
+            {/* Left column: folio + image */}
+            <div className="col-span-12 lg:col-span-5">
               <FadeIn>
                 <SectionFolio number="01" title="理念" subtitle="Philosophy" />
               </FadeIn>
-              {/* Side image */}
-              <FadeIn delay={2}>
-                <div className="hidden lg:block mt-8 relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+              <FadeIn delay={1}>
+                <div
+                  className="relative overflow-hidden mt-4"
+                  style={{ aspectRatio: "4/5" }}
+                >
                   <Image
-                    src="/images/cost-consulting.jpg"
-                    alt="経費削減コンサルティング"
+                    src="/images/sendai-city.jpg"
+                    alt="仙台の街並み"
                     fill
                     className="object-cover"
-                    sizes="25vw"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ backgroundColor: "rgba(245,244,240,0.06)" }}
                   />
                 </div>
               </FadeIn>
             </div>
-            <div className="col-span-12 lg:col-span-7 lg:col-start-5">
-              <FadeIn delay={1}>
-                <p className="font-[family-name:var(--font-noto-serif-jp)] text-xl md:text-2xl font-light leading-relaxed mb-8">
+
+            {/* Right column: text content */}
+            <div className="col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col justify-center">
+              <FadeIn delay={2}>
+                <p className="font-[family-name:var(--font-noto-serif-jp)] text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-10">
                   お付き合いする企業様のコストを
                   <br className="hidden md:block" />
-                  徹底的に下げることに全力を注ぎます。
+                  徹底的に下げることに
+                  <br className="hidden md:block" />
+                  全力を注ぎます。
                 </p>
               </FadeIn>
-              <FadeIn delay={2}>
+              <FadeIn delay={3}>
                 <p
-                  className="text-sm leading-[2]"
+                  className="text-sm leading-[2] max-w-lg"
                   style={{ color: "var(--color-text-mid)" }}
                 >
                   日々、急速な変化をしている情報社会で、クライアント様へは常に有益且つ、
                   正確な情報提供を徹底し、現在抱えている問題の解決に当事者意識をもって接していきます。
+                </p>
+              </FadeIn>
+              <FadeIn delay={4}>
+                <p
+                  className="text-sm leading-[2] mt-6 max-w-lg"
+                  style={{ color: "var(--color-text-mid)" }}
+                >
                   人と人、企業と企業をつなぎ、双方のビジネスが円滑に展開できる提案に注力し、
                   我々、エコロジーコミュニケーションとお付き合いできて、
                   「よかった」「ありがとう」を沢山頂ける企業を目指していきます。
                 </p>
+              </FadeIn>
+              <FadeIn delay={5}>
+                <div className="mt-10">
+                  <Link
+                    href="/company"
+                    className="link-hover text-sm tracking-[0.08em]"
+                    style={{ color: "var(--color-accent)" }}
+                  >
+                    会社案内を見る
+                  </Link>
+                </div>
               </FadeIn>
             </div>
           </div>
@@ -196,62 +249,82 @@ export default function Home() {
             <SectionFolio number="02" title="事業紹介" subtitle="Services" />
           </FadeIn>
 
-          {/* Wide image banner */}
-          <FadeIn>
-            <div className="grid grid-cols-12 gap-8 mb-16">
-              <div className="col-span-12 lg:col-span-9 lg:col-start-3 relative overflow-hidden" style={{ height: "280px" }}>
-                <Image
-                  src="/images/office-desk.jpg"
-                  alt="ビジネスコンサルティング"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 75vw"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ backgroundColor: "rgba(245,244,240,0.1)" }}
-                />
-              </div>
-            </div>
-          </FadeIn>
-
-          <div className="grid grid-cols-12 gap-8 mt-8">
+          {/* Service items - editorial staggered layout */}
+          <div className="mt-8 space-y-24 lg:space-y-32">
             {services.map((service, i) => (
-              <div
-                key={service.title}
-                className={`col-span-12 ${
-                  i === 0 ? "md:col-span-5" : i === 1 ? "md:col-span-4" : "md:col-span-3"
-                }`}
-              >
-                <FadeIn delay={i + 1}>
+              <FadeIn key={service.title} delay={1}>
+                <div
+                  className={`grid grid-cols-12 gap-6 lg:gap-8 items-center ${
+                    i % 2 === 1 ? "direction-reverse" : ""
+                  }`}
+                >
+                  {/* Image */}
                   <div
-                    className="p-8 h-full"
-                    style={{
-                      borderLeft: "1px solid var(--color-border)",
-                    }}
+                    className={`col-span-12 lg:col-span-7 ${
+                      i % 2 === 1
+                        ? "lg:col-start-6 lg:order-2"
+                        : "lg:order-1"
+                    }`}
                   >
+                    <div
+                      className="relative overflow-hidden"
+                      style={{ aspectRatio: "16/10" }}
+                    >
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 58vw"
+                      />
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          backgroundColor: "rgba(245,244,240,0.06)",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Text */}
+                  <div
+                    className={`col-span-12 lg:col-span-4 ${
+                      i % 2 === 1
+                        ? "lg:col-start-1 lg:order-1"
+                        : "lg:col-start-9 lg:order-2"
+                    }`}
+                  >
+                    <span
+                      className="font-[family-name:var(--font-cormorant)] text-6xl lg:text-7xl font-extralight block mb-4"
+                      style={{ color: "rgba(26,26,26,0.06)" }}
+                    >
+                      {service.number}
+                    </span>
                     <p className="label mb-3">{service.subtitle}</p>
-                    <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg mb-4">
+                    <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-xl lg:text-2xl mb-5">
                       {service.title}
                     </h3>
                     <p
-                      className="text-sm leading-relaxed"
+                      className="text-sm leading-[2]"
                       style={{ color: "var(--color-text-mid)" }}
                     >
                       {service.description}
                     </p>
                   </div>
-                </FadeIn>
-              </div>
+                </div>
+              </FadeIn>
             ))}
           </div>
 
-          <FadeIn delay={4}>
-            <div className="mt-12">
+          <FadeIn delay={2}>
+            <div className="mt-20 text-center">
               <Link
                 href="/service"
-                className="link-hover text-sm tracking-[0.08em]"
-                style={{ color: "var(--color-accent)" }}
+                className="inline-block border px-10 py-4 text-sm tracking-[0.08em] transition-all duration-300 hover:bg-[var(--color-text)] hover:text-[var(--color-base)]"
+                style={{
+                  borderColor: "var(--color-text)",
+                  color: "var(--color-text)",
+                }}
               >
                 業務内容の詳細を見る
               </Link>
@@ -274,24 +347,27 @@ export default function Home() {
             <div className="col-span-12 lg:col-span-7 lg:col-start-5">
               {news.map((item, i) => (
                 <FadeIn key={item.date} delay={i + 1}>
-                  <div
-                    className="flex gap-8 py-6 items-baseline"
+                  <Link
+                    href="/news"
+                    className="group flex gap-8 py-7 items-baseline transition-colors duration-300"
                     style={{
                       borderBottom: "1px solid var(--color-border-light)",
                     }}
                   >
                     <time
-                      className="text-xs tracking-[0.08em] shrink-0"
+                      className="font-[family-name:var(--font-cormorant)] text-sm tracking-[0.04em] shrink-0"
                       style={{ color: "var(--color-text-mid)" }}
                     >
                       {item.date}
                     </time>
-                    <p className="text-sm">{item.title}</p>
-                  </div>
+                    <p className="text-sm group-hover:text-[var(--color-accent)] transition-colors duration-300">
+                      {item.title}
+                    </p>
+                  </Link>
                 </FadeIn>
               ))}
               <FadeIn delay={4}>
-                <div className="mt-8">
+                <div className="mt-10">
                   <Link
                     href="/news"
                     className="link-hover text-sm tracking-[0.08em]"
@@ -310,28 +386,51 @@ export default function Home() {
 
       {/* ── CTA Section ── */}
       <section
-        className="section-pad text-center"
+        className="relative overflow-hidden"
         style={{ backgroundColor: "var(--color-base-warm)" }}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <FadeIn>
-            <p className="label mb-6">Contact</p>
-            <p className="font-[family-name:var(--font-noto-serif-jp)] text-2xl md:text-3xl font-light mb-4">
-              お気軽にお問い合わせください
-            </p>
-            <p
-              className="text-sm mb-8"
-              style={{ color: "var(--color-text-mid)" }}
-            >
-              TEL: 022-226-8283
-            </p>
-            <p
-              className="text-xs"
-              style={{ color: "var(--color-text-mid)" }}
-            >
-              営業時間 9:00 - 18:00（土日祝休）
-            </p>
-          </FadeIn>
+        <div className="grid grid-cols-12 min-h-[480px]">
+          {/* Left: decorative image */}
+          <div className="hidden lg:block col-span-5 relative">
+            <Image
+              src="/images/sendai-city.jpg"
+              alt="仙台"
+              fill
+              className="object-cover"
+              sizes="42vw"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to right, transparent 0%, rgba(232,230,225,1) 100%)",
+              }}
+            />
+          </div>
+
+          {/* Right: contact info */}
+          <div className="col-span-12 lg:col-span-6 lg:col-start-7 flex flex-col justify-center section-pad px-6 md:px-12">
+            <FadeIn>
+              <p className="label mb-6">Contact</p>
+              <p className="font-[family-name:var(--font-noto-serif-jp)] text-2xl md:text-3xl font-light mb-6 leading-relaxed">
+                お気軽に
+                <br />
+                お問い合わせください
+              </p>
+              <p
+                className="font-[family-name:var(--font-cormorant)] text-3xl font-light mb-4 tracking-wide"
+                style={{ color: "var(--color-text)" }}
+              >
+                022-226-8283
+              </p>
+              <p
+                className="text-xs"
+                style={{ color: "var(--color-text-mid)" }}
+              >
+                営業時間 9:00 - 18:00（土日祝休）
+              </p>
+            </FadeIn>
+          </div>
         </div>
       </section>
     </>
