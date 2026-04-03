@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="text-right">
                   <p className="label mb-2">Since</p>
                   <p className="font-[family-name:var(--font-cormorant)] text-5xl font-light">
-                    2019
+                    2011
                   </p>
                 </div>
               </FadeIn>
