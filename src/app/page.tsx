@@ -56,7 +56,7 @@ export default function Home() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, rgba(245,244,240,0.92) 0%, rgba(245,244,240,0.6) 40%, rgba(245,244,240,0.85) 100%)",
+                "linear-gradient(to bottom, rgba(240,245,241,0.92) 0%, rgba(240,245,241,0.6) 40%, rgba(240,245,241,0.85) 100%)",
             }}
           />
         </div>
@@ -188,7 +188,7 @@ export default function Home() {
                   />
                   <div
                     className="absolute inset-0"
-                    style={{ backgroundColor: "rgba(245,244,240,0.06)" }}
+                    style={{ backgroundColor: "rgba(240,245,241,0.06)" }}
                   />
                 </div>
               </FadeIn>
@@ -280,7 +280,7 @@ export default function Home() {
                       <div
                         className="absolute inset-0"
                         style={{
-                          backgroundColor: "rgba(245,244,240,0.06)",
+                          backgroundColor: "rgba(240,245,241,0.06)",
                         }}
                       />
                     </div>

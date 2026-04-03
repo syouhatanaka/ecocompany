@@ -34,7 +34,7 @@ export default function Header() {
       }`}
       style={{
         backgroundColor: scrolled
-          ? "rgba(245,244,240,0.85)"
+          ? "rgba(240,245,241,0.85)"
           : "transparent",
         borderBottom: scrolled
           ? "1px solid rgba(26,26,26,0.06)"
@@ -97,7 +97,7 @@ export default function Header() {
         className={`md:hidden overflow-hidden transition-all duration-500 ${
           menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
-        style={{ backgroundColor: "rgba(245,244,240,0.95)" }}
+        style={{ backgroundColor: "rgba(240,245,241,0.95)" }}
       >
         <nav className="flex flex-col items-start gap-6 px-6 py-8">
           {navItems.map((item) => (

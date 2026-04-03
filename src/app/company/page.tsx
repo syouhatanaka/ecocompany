@@ -151,7 +151,7 @@ export default function CompanyPage() {
                   style={{ border: "1px solid var(--color-border-light)" }}
                 >
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.2!2d140.873!3d38.264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5a6u5Z-O55yM5LuZ5Y-w5biC6Z2S6JGJ5Yy65pys55S6MeS4geebrjktNeOAgOS6lOWfjuODk-ODqzJG!5e0!3m2!1sja!2sjp!4v1"
+                    src="https://maps.google.com/maps?q=%E5%AE%AE%E5%9F%8E%E7%9C%8C%E4%BB%99%E5%8F%B0%E5%B8%82%E9%9D%92%E8%91%89%E5%8C%BA%E6%9C%AC%E7%94%BA1%E4%B8%81%E7%9B%AE9-5+%E4%BA%94%E5%9F%8E%E3%83%93%E3%83%AB&z=17&output=embed"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}

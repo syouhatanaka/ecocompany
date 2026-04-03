@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --color-base: #F5F4F0;
-  --color-base-warm: #E8E6E1;
+  --color-base: #F0F5F1;
+  --color-base-warm: #E4EBE5;
   --color-text: #1A1A1A;
   --color-text-mid: #6B6B6B;
   --color-accent: #3A7D44;
@@ -11,8 +11,8 @@
 }
 
 @theme inline {
-  --color-base: #F5F4F0;
-  --color-base-warm: #E8E6E1;
+  --color-base: #F0F5F1;
+  --color-base-warm: #E4EBE5;
   --color-text: #1A1A1A;
   --color-text-mid: #6B6B6B;
   --color-accent: #3A7D44;
