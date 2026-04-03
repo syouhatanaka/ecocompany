@@ -5,7 +5,7 @@
   --color-base-warm: #E8E6E1;
   --color-text: #1A1A1A;
   --color-text-mid: #6B6B6B;
-  --color-accent: #2E6B6B;
+  --color-accent: #3A7D44;
   --color-border: rgba(26, 26, 26, 0.12);
   --color-border-light: rgba(26, 26, 26, 0.06);
 }
@@ -15,7 +15,7 @@
   --color-base-warm: #E8E6E1;
   --color-text: #1A1A1A;
   --color-text-mid: #6B6B6B;
-  --color-accent: #2E6B6B;
+  --color-accent: #3A7D44;
   --font-sans: var(--font-dm-sans), var(--font-noto-sans-jp), sans-serif;
   --font-serif: var(--font-cormorant), var(--font-noto-serif-jp), serif;
 }
