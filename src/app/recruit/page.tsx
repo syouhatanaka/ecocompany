@@ -10,7 +10,7 @@ export default function RecruitPage() {
   return (
     <>
       {/* ── Page Header ── */}
-      <section className="pt-52 pb-20">
+      <section className="pt-72 pb-24">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 lg:col-span-7">

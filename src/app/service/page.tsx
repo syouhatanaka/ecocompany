@@ -42,7 +42,7 @@ export default function ServicePage() {
   return (
     <>
       {/* ── Page Header ── */}
-      <section className="pt-52 pb-20">
+      <section className="pt-72 pb-24">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 lg:col-span-7">
@@ -65,7 +65,7 @@ export default function ServicePage() {
       {/* ── Cost Reduction ── */}
       <section className="section-pad">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8 mb-16">
+          <div className="grid grid-cols-12 gap-8 lg:gap-12 mb-20 lg:mb-28">
             <div className="col-span-12 lg:col-span-4">
               <FadeIn>
                 <SectionFolio number="01" title="経費削減事業" subtitle="Cost Reduction" />
@@ -73,7 +73,7 @@ export default function ServicePage() {
             </div>
             <div className="col-span-12 lg:col-span-7 lg:col-start-5">
               <FadeIn delay={1}>
-                <div className="relative overflow-hidden" style={{ height: "300px" }}>
+                <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
                   <Image
                     src="/images/cost-consulting.jpg"
                     alt="経費削減コンサルティング"
@@ -86,18 +86,18 @@ export default function ServicePage() {
             </div>
           </div>
 
-          <div className="space-y-12 mt-8">
+          <div className="space-y-16 lg:space-y-20">
             {costReduction.map((item, i) => (
               <FadeIn key={item.title} delay={i + 1}>
-                <div className="grid grid-cols-12 gap-8">
+                <div className="grid grid-cols-12 gap-8 lg:gap-12">
                   <div className="col-span-12 lg:col-span-3">
-                    <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg">
+                    <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg lg:text-xl leading-relaxed">
                       {item.title}
                     </h3>
                   </div>
                   <div className="col-span-12 lg:col-span-7 lg:col-start-5">
                     <p
-                      className="text-sm leading-[2]"
+                      className="text-sm leading-[2.2]"
                       style={{ color: "var(--color-text-mid)" }}
                     >
                       {item.description}
@@ -105,7 +105,7 @@ export default function ServicePage() {
                   </div>
                 </div>
                 {i < costReduction.length - 1 && (
-                  <hr className="ruler mt-8" />
+                  <hr className="ruler mt-16 lg:mt-20" />
                 )}
               </FadeIn>
             ))}
@@ -121,10 +121,10 @@ export default function ServicePage() {
         style={{ backgroundColor: "var(--color-base-warm)" }}
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8 mb-16">
+          <div className="grid grid-cols-12 gap-8 lg:gap-12 mb-20 lg:mb-28">
             <div className="col-span-12 lg:col-span-5">
               <FadeIn>
-                <div className="relative overflow-hidden" style={{ height: "300px" }}>
+                <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
                   <Image
                     src="/images/logistics.jpg"
                     alt="物流・配送イメージ"
@@ -142,18 +142,18 @@ export default function ServicePage() {
             </div>
           </div>
 
-          <div className="space-y-12 mt-8">
+          <div className="space-y-16 lg:space-y-20">
             {logistics.map((item, i) => (
               <FadeIn key={item.title} delay={i + 1}>
-                <div className="grid grid-cols-12 gap-8">
+                <div className="grid grid-cols-12 gap-8 lg:gap-12">
                   <div className="col-span-12 lg:col-span-3">
-                    <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg">
+                    <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg lg:text-xl leading-relaxed">
                       {item.title}
                     </h3>
                   </div>
                   <div className="col-span-12 lg:col-span-7 lg:col-start-5">
                     <p
-                      className="text-sm leading-[2]"
+                      className="text-sm leading-[2.2]"
                       style={{ color: "var(--color-text-mid)" }}
                     >
                       {item.description}
@@ -161,7 +161,7 @@ export default function ServicePage() {
                   </div>
                 </div>
                 {i < logistics.length - 1 && (
-                  <hr className="ruler mt-8" />
+                  <hr className="ruler mt-16 lg:mt-20" />
                 )}
               </FadeIn>
             ))}
@@ -178,10 +178,10 @@ export default function ServicePage() {
             <SectionFolio number="03" title="サービス事業" subtitle="Business Service" />
           </FadeIn>
 
-          <div className="grid grid-cols-12 gap-8 mt-8">
+          <div className="grid grid-cols-12 gap-8 lg:gap-12 mt-16 lg:mt-20">
             <div className="col-span-12 lg:col-span-3">
               <FadeIn delay={1}>
-                <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg">
+                <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg lg:text-xl leading-relaxed">
                   請求代行サービス
                 </h3>
               </FadeIn>
@@ -189,7 +189,7 @@ export default function ServicePage() {
             <div className="col-span-12 lg:col-span-7 lg:col-start-5">
               <FadeIn delay={2}>
                 <p
-                  className="text-sm leading-[2]"
+                  className="text-sm leading-[2.2]"
                   style={{ color: "var(--color-text-mid)" }}
                 >
                   企業様の顧客から料金を集金する代行業務を請け負っております。
