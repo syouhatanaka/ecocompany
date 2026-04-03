@@ -296,7 +296,7 @@ export default function Home() {
                   >
                     <span
                       className="font-[family-name:var(--font-cormorant)] text-6xl lg:text-7xl font-extralight block mb-4"
-                      style={{ color: "rgba(26,26,26,0.06)" }}
+                      style={{ color: "rgba(26,26,26,0.15)" }}
                     >
                       {service.number}
                     </span>

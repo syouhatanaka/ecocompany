@@ -101,7 +101,7 @@ h2 {
   font-family: var(--font-serif);
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 200;
-  color: rgba(26, 26, 26, 0.06);
+  color: rgba(26, 26, 26, 0.15);
   line-height: 1;
   letter-spacing: -0.04em;
   user-select: none;
