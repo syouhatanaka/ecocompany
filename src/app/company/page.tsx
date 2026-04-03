@@ -37,7 +37,7 @@ export default function CompanyPage() {
             <div className="col-span-12 lg:col-span-10 lg:col-start-2 relative overflow-hidden" style={{ height: "360px" }}>
               <Image
                 src="/images/sendai-city.jpg"
-                alt="仙台の街並み"
+                alt="ビジネスチームのコラボレーション"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 83vw"

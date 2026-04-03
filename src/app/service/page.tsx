@@ -75,8 +75,8 @@ export default function ServicePage() {
               <FadeIn delay={1}>
                 <div className="relative overflow-hidden" style={{ height: "300px" }}>
                   <Image
-                    src="/images/office-meeting.jpg"
-                    alt="ビジネスミーティング"
+                    src="/images/cost-consulting.jpg"
+                    alt="経費削減コンサルティング"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 58vw"

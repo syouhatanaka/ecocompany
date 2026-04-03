@@ -153,8 +153,8 @@ export default function Home() {
               <FadeIn delay={2}>
                 <div className="hidden lg:block mt-8 relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
                   <Image
-                    src="/images/sendai-city.jpg"
-                    alt="仙台の街並み"
+                    src="/images/cost-consulting.jpg"
+                    alt="経費削減コンサルティング"
                     fill
                     className="object-cover"
                     sizes="25vw"
@@ -201,8 +201,8 @@ export default function Home() {
             <div className="grid grid-cols-12 gap-8 mb-16">
               <div className="col-span-12 lg:col-span-9 lg:col-start-3 relative overflow-hidden" style={{ height: "280px" }}>
                 <Image
-                  src="/images/business-handshake.jpg"
-                  alt="ビジネスパートナーシップ"
+                  src="/images/office-desk.jpg"
+                  alt="ビジネスコンサルティング"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 75vw"
