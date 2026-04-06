@@ -10,51 +10,43 @@ export default function RecruitPage() {
   return (
     <>
       {/* ── Page Header ── */}
-      <section className="pt-72 pb-24">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-7">
-              <FadeIn>
-                <p className="label mb-4" style={{ color: "var(--color-accent)" }}>
-                  Recruit
-                </p>
-                <h1 className="font-[family-name:var(--font-noto-serif-jp)]">採用情報</h1>
-              </FadeIn>
-            </div>
-            <div className="hidden lg:flex col-span-5 items-end justify-end">
-              <p className="vertical-text">採用についてのご案内</p>
-            </div>
-          </div>
+      <section className="pt-40 pb-16 pixel-grid-bg">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+          <FadeIn>
+            <p className="label mb-4">▶ Recruit</p>
+            <h1 className="mb-4">採用情報</h1>
+            <p className="text-xs" style={{ color: "var(--color-text-mid)" }}>
+              採用についてのご案内
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      <hr className="ruler" />
+      <hr className="pixel-divider" />
 
       {/* ── Current Status ── */}
       <section
-        className="section-pad"
-        style={{ backgroundColor: "var(--color-base-warm)" }}
+        className="section-pad pixel-grid-bg"
+        style={{ backgroundColor: "var(--color-base-light)" }}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-3">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="lg:col-span-4">
               <FadeIn>
                 <SectionFolio number="01" title="採用状況" subtitle="Status" />
               </FadeIn>
             </div>
-            <div className="col-span-12 lg:col-span-7 lg:col-start-5">
+            <div className="lg:col-span-7 lg:col-start-5">
               <FadeIn delay={1}>
-                <div
-                  className="p-8"
-                  style={{
-                    border: "1px solid var(--color-border)",
-                  }}
-                >
-                  <p className="font-[family-name:var(--font-noto-serif-jp)] text-lg mb-2">
+                <div className="pixel-border-accent2 p-8 text-center">
+                  <p className="text-lg mb-3" style={{ color: "var(--color-accent-2)" }}>
+                    ⚠ NOTICE
+                  </p>
+                  <p className="text-sm mb-2">
                     現在採用活動は行っておりません
                   </p>
                   <p
-                    className="text-sm"
+                    className="text-xs"
                     style={{ color: "var(--color-text-mid)" }}
                   >
                     採用活動を再開する際は、こちらのページにて募集要項を掲載いたします。
@@ -66,24 +58,24 @@ export default function RecruitPage() {
         </div>
       </section>
 
-      <hr className="ruler" />
+      <hr className="pixel-divider" />
 
       {/* ── Job Details ── */}
-      <section className="section-pad">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+      <section className="section-pad pixel-grid-bg">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
           <FadeIn>
             <SectionFolio number="02" title="募集要項" subtitle="Requirements" />
           </FadeIn>
 
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-8 lg:col-start-3">
-              <FadeIn delay={1}>
-                <p
-                  className="text-sm mb-8"
-                  style={{ color: "var(--color-text-mid)" }}
-                >
-                  採用再開時の募集要項（参考）
-                </p>
+          <div className="max-w-3xl mx-auto">
+            <FadeIn delay={1}>
+              <p
+                className="text-xs mb-6"
+                style={{ color: "var(--color-text-mid)" }}
+              >
+                📄 採用再開時の募集要項（参考）
+              </p>
+              <div className="pixel-card">
                 <table className="info-table">
                   <tbody>
                     <tr>
@@ -106,7 +98,7 @@ export default function RecruitPage() {
                         各種経費削減事業 / 企業間アライアンス事業
                         <br />
                         <span
-                          className="text-sm mt-2 block"
+                          className="text-xs mt-2 block"
                           style={{ color: "var(--color-text-mid)" }}
                         >
                           クライアントまたは新規業務を担当し、当社提案商品での企画・提案を実施
@@ -127,8 +119,8 @@ export default function RecruitPage() {
                     </tr>
                   </tbody>
                 </table>
-              </FadeIn>
-            </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
