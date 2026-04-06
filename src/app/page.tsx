@@ -210,7 +210,7 @@ export default function Home() {
             {/* Right column */}
             <div className="flex flex-col justify-center">
               <FadeIn delay={2}>
-                <p className="text-base md:text-lg leading-[2.2] mb-8">
+                <p className="text-base md:text-lg leading-[2.2] mb-8" style={{ color: "#ffffff" }}>
                   お付き合いする企業様のコストを
                   <br className="hidden md:block" />
                   徹底的に下げることに

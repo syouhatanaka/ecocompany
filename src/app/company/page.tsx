@@ -39,7 +39,7 @@ export default function CompanyPage() {
             <div className="lg:col-span-7 lg:col-start-5">
               <FadeIn delay={1}>
                 <div className="pixel-card mb-6">
-                  <p className="text-base leading-[2.2] mb-2">
+                  <p className="text-base leading-[2.2] mb-2" style={{ color: "#ffffff" }}>
                     お付き合いする企業様のコストを
                     <br className="hidden md:block" />
                     徹底的に下げることに
