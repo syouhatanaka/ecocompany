@@ -4,8 +4,8 @@
   --color-base: #1a1a2e;
   --color-base-light: #16213e;
   --color-base-warm: #0f3460;
-  --color-text: #e0e0e0;
-  --color-text-mid: #94a3b8;
+  --color-text: #f0f0f0;
+  --color-text-mid: #c8d6e5;
   --color-accent: #00d4aa;
   --color-accent-2: #e94560;
   --color-accent-3: #ffd700;
@@ -18,8 +18,8 @@
   --color-base: #1a1a2e;
   --color-base-light: #16213e;
   --color-base-warm: #0f3460;
-  --color-text: #e0e0e0;
-  --color-text-mid: #94a3b8;
+  --color-text: #f0f0f0;
+  --color-text-mid: #c8d6e5;
   --color-accent: #00d4aa;
   --color-accent-2: #e94560;
   --color-accent-3: #ffd700;
@@ -116,10 +116,14 @@ body {
 
 /* ── Pixel card ── */
 .pixel-card {
-  background-color: var(--color-base-light);
+  background-color: rgba(22, 33, 62, 0.8);
   border: 3px solid var(--color-border);
   padding: 2rem;
   position: relative;
+}
+
+.pixel-card p {
+  color: var(--color-text-mid);
 }
 
 .pixel-card::before {
