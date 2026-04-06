@@ -163,16 +163,45 @@ export default function Home() {
                   style={{ display: "inline-block", width: "100%" }}
                 >
                   <div
-                    className="w-full h-64 lg:h-80 flex items-center justify-center"
+                    className="w-full h-64 lg:h-80 flex items-center justify-center relative"
                     style={{ backgroundColor: "var(--color-base-warm)" }}
                   >
-                    {/* Pixel art scene representing Sendai */}
-                    <div className="text-center">
-                      <div className="text-6xl mb-2">🌳🏙️🌳</div>
-                      <p className="text-xs" style={{ color: "var(--color-accent)" }}>
-                        - SENDAI CITY -
-                      </p>
-                    </div>
+                    {/* Pixel art Sendai scene */}
+                    <svg viewBox="0 0 200 120" className="w-48 h-auto" style={{ imageRendering: "pixelated" }}>
+                      {/* Tree left */}
+                      <rect x="20" y="70" width="8" height="16" fill="#006644" />
+                      <rect x="16" y="58" width="16" height="12" fill="#00d4aa" />
+                      <rect x="20" y="50" width="8" height="8" fill="#00d4aa" opacity="0.7" />
+                      {/* Building 1 */}
+                      <rect x="50" y="40" width="24" height="46" fill="#0f3460" />
+                      <rect x="54" y="44" width="4" height="4" fill="#ffd700" opacity="0.8" />
+                      <rect x="62" y="52" width="4" height="4" fill="#ffd700" opacity="0.6" />
+                      <rect x="54" y="60" width="4" height="4" fill="#00d4aa" opacity="0.5" />
+                      {/* Building 2 (tall) */}
+                      <rect x="80" y="24" width="20" height="62" fill="#16213e" />
+                      <rect x="84" y="28" width="4" height="4" fill="#ffd700" opacity="0.9" />
+                      <rect x="92" y="36" width="4" height="4" fill="#ffd700" opacity="0.7" />
+                      <rect x="84" y="48" width="4" height="4" fill="#ffd700" opacity="0.6" />
+                      <rect x="92" y="56" width="4" height="4" fill="#00d4aa" opacity="0.6" />
+                      {/* Building 3 */}
+                      <rect x="106" y="44" width="28" height="42" fill="#0f3460" />
+                      <rect x="110" y="48" width="4" height="4" fill="#ffd700" opacity="0.7" />
+                      <rect x="122" y="48" width="4" height="4" fill="#ffd700" opacity="0.8" />
+                      <rect x="116" y="60" width="4" height="4" fill="#ffd700" opacity="0.6" />
+                      {/* Tree right */}
+                      <rect x="150" y="70" width="8" height="16" fill="#006644" />
+                      <rect x="146" y="58" width="16" height="12" fill="#00d4aa" />
+                      <rect x="150" y="50" width="8" height="8" fill="#00d4aa" opacity="0.7" />
+                      {/* Ground */}
+                      <rect x="0" y="86" width="200" height="34" fill="#0d2137" />
+                      {/* Stars */}
+                      <rect x="40" y="12" width="2" height="2" fill="#ffd700" opacity="0.6" />
+                      <rect x="120" y="8" width="2" height="2" fill="#ffd700" opacity="0.8" />
+                      <rect x="170" y="16" width="2" height="2" fill="#ffd700" opacity="0.5" />
+                    </svg>
+                    <p className="absolute bottom-4 text-xs" style={{ color: "var(--color-accent)" }}>
+                      - SENDAI CITY -
+                    </p>
                   </div>
                 </div>
               </FadeIn>
